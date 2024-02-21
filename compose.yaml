@@ -47,7 +47,7 @@ services:
   
   db:
     build: "./mysql"
-    container_name: mysql-db
+    container_name: mysql8-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root123!
