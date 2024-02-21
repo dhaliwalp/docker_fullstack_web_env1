@@ -1,2 +1,2 @@
-# docker_fullstack_web_env1
+# Web: ReactJS + Nginx + Flask + MySQL
 A docker container environment for ReactJS, Nginx, Flask, and MySQL
