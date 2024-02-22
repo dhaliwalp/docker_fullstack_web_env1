@@ -3,12 +3,17 @@ FROM ubuntu:latest
 
 RUN apt-get update
 RUN apt-get install nginx -y
+
+# for debugging editing purpose
+RUN apt-get install vim -y
 WORKDIR /var/www/html
 
 # Copy config nginx
 RUN rm /etc/nginx/sites-enabled/default
+RUN mkdir /var/www/html/shtml
 COPY nginx.conf /etc/nginx/sites-enabled/default.conf
 COPY index.html /var/www/html
+COPY index.html /var/www/html/shtml
 
 
 RUN apt-get install curl -y
