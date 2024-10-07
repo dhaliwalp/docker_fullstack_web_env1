@@ -13,6 +13,7 @@ services:
     build: "./nginx"
     volumes:
       - ./nginx/nginx.conf:/tmp/nginx.conf
+      - ./nginx/shtml:/var/www/html/shtml
     environment: 
       - FLASK_SERVER_ADDR=backend:9091
       - REACT_NODE_ADDR=client:3000
