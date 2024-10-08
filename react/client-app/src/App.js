@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
 
 const LoginPage = () => {
   const [error, setError] = useState('');
@@ -57,12 +56,7 @@ const LoginPage = () => {
           </button>
         </div>
         
-        {error && (
-          <div className="mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-            <span className="block sm:inline">{error}</span>
-            <AlertCircle className="h-4 w-4 inline-block ml-2" />
-          </div>
-        )}
+       
       </div>
     </div>
   );
