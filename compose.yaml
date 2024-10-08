@@ -2,6 +2,8 @@ services:
   client:
     build: "./react"
     container_name: client_react
+    volumes:
+      - ./react/client-app/src:/app/client-app/src
     ports: 
       - "3000:3000"
     depends_on:
@@ -13,6 +15,7 @@ services:
     build: "./nginx"
     volumes:
       - ./nginx/nginx.conf:/tmp/nginx.conf
+      - ./nginx/shtml:/var/www/html/shtml
     environment: 
       - FLASK_SERVER_ADDR=backend:9091
       - REACT_NODE_ADDR=client:3000
