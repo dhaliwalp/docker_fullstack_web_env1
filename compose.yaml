@@ -2,6 +2,8 @@ services:
   client:
     build: "./react"
     container_name: client_react
+    volumes:
+      - ./react/client-app/src:/app/client-app/src
     ports: 
       - "3000:3000"
     depends_on:
