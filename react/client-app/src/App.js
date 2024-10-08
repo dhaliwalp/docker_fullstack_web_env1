@@ -1,17 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './HomePage';
-import LoginPage from './LoginPage';
-import SignupPage from './SignupPage';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/home';
+import Signup from './pages/signup';
+import Login from './pages/login';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-      </Routes>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+      </Switch>
     </Router>
   );
 }
